@@ -38,5 +38,22 @@ app.get('/', version({
 
 ### Requesting 
 
+Api version can be defined either with `apiversion` query parameter or custom header
+
 ```javascript
+const request = require('request');
+
+request.get('http://api.com/thing/1?apiversion=2017-01-19');
+```
+
+```javascript
+const request = require('request');
+
+request({
+  method: 'get',
+  uri: 'http://api.com/thing/1',
+  headers: {
+    'apiversion': '2017-01-19'
+  }
+});
 ```
