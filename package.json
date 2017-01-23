@@ -6,11 +6,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "http-errors": "^1.5.1"
   },
   "devDependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.1",
+    "supertest": "^2.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm-run-all test:*",
+    "test:quality": "jshint index.js example/ tests/",
+    "test:style": "jscs index.js example/ tests/",
+    "test:unit": "mocha tests --check-leaks"
   }
 }

@@ -1,0 +1,33 @@
+{
+  "excludeFiles": [
+  ],
+  "disallowMixedSpacesAndTabs": true,
+  "validateIndentation": {
+    "value": 2,
+    "allExcept": ["comments", "emptyLines"]
+  },
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do"
+  ],
+  "requireSpaceAfterKeywords": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch"
+  ],
+  "disallowSpaceAfterKeywords": [
+    "catch",
+    "function"
+  ],
+  "requireSpaceBeforeBlockStatements": true,
+  "disallowSpacesInFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideParentheses": true
+}
