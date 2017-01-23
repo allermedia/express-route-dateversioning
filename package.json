@@ -1,7 +1,7 @@
 {
-  "name": "express-route-dateversioning",
+  "name": "@allermedia/express-route-dateversioning",
   "version": "1.0.1",
-  "description": "",
+  "description": "Express middleware for versioning routes according dates",
   "main": "index.js",
   "author": "",
   "license": "ISC",
@@ -21,5 +21,17 @@
     "test:quality": "jshint index.js example/ tests/",
     "test:style": "jscs index.js example/ tests/",
     "test:unit": "mocha tests --check-leaks"
-  }
+  },
+  "directories": {
+    "example": "example",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allermedia/express-route-dateversioning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allermedia/express-route-dateversioning/issues"
+  },
+  "homepage": "https://github.com/allermedia/express-route-dateversioning#readme"
 }
