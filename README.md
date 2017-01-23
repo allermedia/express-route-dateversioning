@@ -8,7 +8,7 @@ Express middleware for versioning routes according dates.
 
 Date versioning your API enables you to develop and release your API in individual pieces or
 microservices. Defining the API date version lets to defer any of the versions released after
-the date.
+the date, keeping your API consistent over time.
 
 
 ## Install
