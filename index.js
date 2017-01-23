@@ -24,7 +24,7 @@ const middleware = function versionMiddleware(routing) {
   
 
   return function(req, res, next) {
-    let requestedVersion = req.query.apiversion || req.headers['apiversion'];
+    let requestedVersion = req.query.apiversion || req.headers.apiversion;
     if (!requestedVersion) { return next(); }
 
     // Make sure requested version is valid
