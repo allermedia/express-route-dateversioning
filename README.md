@@ -36,7 +36,7 @@ app.get('/', version({
 ```
 
 
-### Requesting 
+### Doing a request to versioned API 
 
 Api version can be defined either with `apiversion` query parameter or custom header
 
@@ -55,5 +55,20 @@ request({
   headers: {
     'apiversion': '2017-01-19'
   }
+});
+```
+
+
+### Custom configuration
+
+Default query param (`apiversion`) and header (`apiversion`) names are also configurable
+
+__Note!__ This should be done before any versioned routes are set
+
+```javascript
+const version = require('express-route-dateversioning');
+version.config({
+  queryparam: 'custom-apiversion',
+  header: 'custom-apiversion'
 });
 ```
