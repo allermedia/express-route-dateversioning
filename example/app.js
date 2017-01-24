@@ -1,8 +1,14 @@
 /**
  * Example app for express-route-dateversioning
+ * 
  */
 const express = require('express');
 const routes = require('./routes');
+const version = require('../');
+
+version.config({
+  header: 'aller-apiversion'
+});
 
 let app = express();
 

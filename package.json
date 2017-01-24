@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/allermedia/express-route-dateversioning#readme",
   "dependencies": {
-    "http-errors": "^1.5.1"
+    "http-errors": "^1.5.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "express": "^4.14.0",
