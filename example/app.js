@@ -4,7 +4,6 @@
  */
 const express = require('express');
 const routes = require('./routes');
-const version = require('../');
 
 let app = express();
 app.use(routes);
