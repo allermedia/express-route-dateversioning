@@ -27,8 +27,8 @@
   },
   "scripts": {
     "test": "npm-run-all test:*",
-    "test:quality": "jshint index.js example/ tests/",
-    "test:style": "jscs index.js example/ tests/",
+    "test:quality": "jshint index.js libs/ example/ tests/",
+    "test:style": "jscs index.js libs/ example/ tests/",
     "test:unit": "mocha tests --check-leaks"
   }
 }
