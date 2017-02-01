@@ -11,7 +11,7 @@ describe('GET /', function() {
     app.use(routes);
   });
 
-  it('should pass request to next middleware when called without apiversion', function(done) {
+  it('should pass request to next middleware when called without apiversion', (done) => {
     supertest(app)
       .get('/')
       .expect(404) // in eaxmple/routes.js, next middleware is 404 handler

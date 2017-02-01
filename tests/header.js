@@ -4,14 +4,14 @@ const routes = require('../example/routes');
 const version = require('../');
 
 
-describe('GET / with header', function() {
+describe('GET / with header', () => {
   let app;
   before(() => {
     app = express();
     app.use(routes);
   });
 
-  it('should respond with 400 error when requesting non-matching version', function(done) {
+  it('should respond with 400 error when requesting non-matching version', (done) => {
     supertest(app)
       .get('/')
       .set('apiversion', '1900-01-01')
@@ -19,7 +19,7 @@ describe('GET / with header', function() {
       .end(done);
   });
 
-  it('should respond with 400 error when bad version is requested', function(done) {
+  it('should respond with 400 error when bad version is requested', (done) => {
     supertest(app)
       .get('/')
       .set('apiversion', 'asdasd-01-01')
@@ -27,7 +27,7 @@ describe('GET / with header', function() {
       .end(done);
   });
 
-  it('should respond with "old ping" when old route is requested', function(done) {
+  it('should respond with "old ping" when old route is requested', (done) => {
     supertest(app)
       .get('/')
       .set('apiversion', '2017-01-01')
@@ -35,7 +35,7 @@ describe('GET / with header', function() {
       .expect('old ping', done);
   });
 
-  it('should respond with "new pong" when new route is requested', function(done) {
+  it('should respond with "new pong" when new route is requested', (done) => {
     supertest(app)
       .get('/')
       .set('apiversion', '2017-01-20')      

@@ -4,7 +4,7 @@ const routes = require('../example/routes');
 const version = require('../');
 
 
-describe('GET / with custom header', function() {
+describe('GET / with custom header', () => {
   let app;
   before(() => {
     version.config({
@@ -14,7 +14,7 @@ describe('GET / with custom header', function() {
     app.use(routes);
   });
 
-  it('should respond with 400 error when requesting non-matching version', function(done) {
+  it('should respond with 400 error when requesting non-matching version', (done) => {
     supertest(app)
       .get('/')
       .set('custom-apiversion', '1900-01-01')
@@ -22,7 +22,7 @@ describe('GET / with custom header', function() {
       .end(done);
   });
 
-  it('should respond with 400 error when bad version is requested', function(done) {
+  it('should respond with 400 error when bad version is requested', (done) => {
     supertest(app)
       .get('/')
       .set('custom-apiversion', 'asdasd-01-01')
@@ -30,7 +30,7 @@ describe('GET / with custom header', function() {
       .end(done);
   });
 
-  it('should respond with "old ping" when old route is requested', function(done) {
+  it('should respond with "old ping" when old route is requested', (done) => {
     supertest(app)
       .get('/')
       .set('custom-apiversion', '2017-01-01')
@@ -38,7 +38,7 @@ describe('GET / with custom header', function() {
       .expect('old ping', done);
   });
 
-  it('should respond with "new pong" when new route is requested', function(done) {
+  it('should respond with "new pong" when new route is requested', (done) => {
     supertest(app)
       .get('/')
       .set('custom-apiversion', '2017-01-20')      
